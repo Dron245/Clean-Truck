@@ -23,7 +23,8 @@ body {
 }
 body {
 	color: $mainColor;
-	line-height: 1.5;
+	//line-height: 1.5;
+	letter-spacing: 0.02px;
 	font-family: $fontFamily;
 	font-size: $fontSize;
 	//text-rendering: optimizeLegibility;
