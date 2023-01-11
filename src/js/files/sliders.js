@@ -7,7 +7,7 @@
 // Подключаем слайдер Swiper из node_modules
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
-import Swiper, { Navigation, Pagination, Thumbs } from 'swiper';
+import Swiper, { Autoplay, Navigation, Pagination, Parallax, Thumbs } from 'swiper';
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -49,14 +49,15 @@ function initSliders() {
 		const thumbsSwiper = new Swiper('.body-bottom__slider', { // Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Thumbs, Navigation],
+			modules: [Thumbs, Navigation, Autoplay],
 			observer: true,
 			//observeParents: true,
 			slidesPerView: 0,
-			spaceBetween: 0,
-			autoHeight: false,
+			spaceBetween: 30,
+			//autoHeight: false,
 			speed: 800,
-			watchOverflow: true,
+			//watchOverflow: true,
+			//autoplay:true,
 			//touchRatio: 0,
 			//simulateTouch: false,
 			//loop: true,
@@ -90,8 +91,8 @@ function initSliders() {
 
 			// Кнопки "влево/вправо"
 			navigation: {
-				prevEl: '.body-bottom_left',
-				nextEl: '.body-bottom_right',
+				prevEl: '.body-bottom__arrow_left',
+				nextEl: '.body-bottom__arrow_right',
 			},
 
 			// Брейкпоинты
@@ -124,14 +125,14 @@ function initSliders() {
 		new Swiper('.body-top__slider', { // Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Thumbs,Pagination],
+			modules: [Thumbs,Pagination, Autoplay],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 1,
 			spaceBetween: 0,
 			autoHeight: true,
 			speed: 800,
-
+			//autoplay:true,
 			//touchRatio: 0,
 			//simulateTouch: false,
 			//loop: true,

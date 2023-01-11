@@ -1,3 +1,112 @@
 //====================================================================================================
+.page {
+
+	// .page__main
+
+	&__main {
+	}
+}
+.main {
+
+	// .main__body-top
+
+	&__body-top {
+	}
+
+	// .main__body-bottom
+
+	&__body-bottom {
+		display: flex;
+		justify-content: center;
+		margin-top: -120px;
+	}
+}
+.body-top {
+
+	// .body-top__slider
+
+	&__slider {
+	}
+
+	
+	// .body-top__swiper
+
+	&__swiper {
+	}
+
+	// .body-top__slide
+
+	&__slide {
+		padding-bottom: percent(948,1920);
+		position: relative;
+	}
+
+	&__text {
+		position: absolute;
+		color: white;
+		top: 50%;
+	}
+	// .body-top__title
+
+	&__title {
+	}
+
+	// .body-top__subtitle
+
+	&__subtitle {
+	}
+}
+.body-bottom {
+
+	// .body-bottom_left
+
+	&_left {
+	}
+
+	// .body-bottom_right
+
+	&_right {
+	}
+
+	// .body-bottom__slider
+
+	&__slider {
+		position: relative;
+	}
+
+	// .body-bottom__swiper
+
+	&__swiper {
+	}
+
+	// .body-bottom__slide
+
+	&__slide {
+		
+	}
+
+	// .body-bottom__controls
+
+	&__controls {
+		position: absolute;
+		display: grid;
+		grid-auto-flow: column;
+		top: 50%;
+		//transform: translateY(-50%);
+	}
+
+	// .body-bottom__arrow
+
+	&__arrow {
+		background-color: rgb(54, 38, 13);
+		&_left {
+			transform: rotate(180deg);
+		}
+
+		&_right {
+			
+		}
+	}
+}
 
 //====================================================================================================

@@ -2,7 +2,9 @@
 .header {
 	//background: #061321;
 	
-	position: sticky;
+	position: absolute;
+	z-index: 2;
+	width: 100%;
 	// .header__container
 
 	&__container {
