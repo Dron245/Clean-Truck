@@ -6,6 +6,7 @@
 	height: 100%;
 	box-sizing: content-box;
 	display: flex;
+	//column-gap: 30px;
 	position: relative;
 }
 .swiper-vertical {
@@ -21,6 +22,7 @@
 .swiper-initialized {
 	.swiper-slide {
 		flex-shrink: 0;
+		
 		// transition-property: transform;
 	}
 }

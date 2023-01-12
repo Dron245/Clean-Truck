@@ -8,6 +8,7 @@
 	// .header__container
 
 	&__container {
+		flex: 0 0 calc(100% - 60px);
 		display: flex;
 		position: relative;
 		z-index: 2;
@@ -20,6 +21,11 @@
 	&__body {
 		position: relative;
 		padding-bottom: 18px;
+		@media (max-width:$mobile){
+			 display: flex;
+			 justify-content: space-between;
+			 padding-bottom: 0;
+		}
 		&::after{
 			content:'';
 			position: absolute;
@@ -37,6 +43,11 @@
 	// .header__logo
 
 	&__logo {
+		flex: 0 0 percent(269.24,1110);
+		padding-bottom: 6.667%;
+		@media (max-width:$mobile){
+			 margin-left: 15px; 
+		}
 	}
 
 	// .header__adress
@@ -106,6 +117,9 @@
 	// .header__phone-link
 
 	&__phone-link {
+		@media (max-width:$mobile){
+			 display: none; 
+		}
 	}
 
 	// .header__phone
@@ -129,6 +143,17 @@
 	&__menu {
 		background: #07192D;
 		opacity: 0.9;
+	}
+
+	&__button {
+		display: none;
+		@media (max-width:$mobile){
+			display: block;
+			position: relative;
+   		 z-index: 2;
+			padding: 21px 19px;
+			background: $mainblue; 
+		}
 	}
 }
 .menu {
@@ -244,10 +269,11 @@
 	@media (max-width: $mobile) {
 		display: block;
 		position: relative;
-		width: rem(30);
+		width: rem(22);
 		height: rem(18);
 		cursor: pointer;
 		z-index: 5;
+		//padding: 21px 19px;
 		span,
 		&::before,
 		&::after {

@@ -19,6 +19,9 @@
 		display: flex;
 		justify-content: center;
 		margin-top: -120px;
+		@media (max-width:$mobile){
+			 margin-top: 0; 
+		}
 	}
 }
 .body-top {
@@ -68,21 +71,65 @@
 	&_right {
 	}
 
+	&__cont {
+		width: 1200px;
+		position: relative;
+		display: flex;
+		justify-content: center;
+		//padding: 0px 15px;
+		@media (max-width: em(1220)){
+			width:100%;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+		@media (max-width:$mobile){
+			 padding-right: 0; 
+		}
+	}
 	// .body-bottom__slider
 
 	&__slider {
 		position: relative;
+		//width: percent(1200,1920);
+		//width: auto;
+		//width: 100%;
+		width: 1100px;
+		display: flex;
+  		justify-content: center;
+		@media (max-width: em(1220)){
+			  width: 620px;
+		}
+		@media (max-width:$mobile){
+			//width: 90%; 
+		}
 	}
 
 	// .body-bottom__swiper
 
 	&__swiper {
+		//width: percent(1110,1200);
+	// 	width: 1100px;
+	// 	@media (max-width: em(1220)){
+	// 		width: 620px;
+	//  }
+		@media (max-width:$mobile){
+			 padding-left: 15px; 
+		}
 	}
 
 	// .body-bottom__slide
 
 	&__slide {
-		
+		width: percent(350,1100);
+		//width: 350px !important;
+		padding-bottom: percent(260,1100);
+		@media (max-width: em(1220)){
+			//width: 500px !important;
+			padding-bottom: 35.95%;
+		}
+		@media (max-width:$mobile){
+			 padding-bottom: 85.25%; 
+		}
 	}
 
 	// .body-bottom__controls
@@ -90,9 +137,17 @@
 	&__controls {
 		position: absolute;
 		display: grid;
-		grid-auto-flow: column;
+		grid-template-columns: repeat(2, 16px);
 		top: 50%;
+		width: 100%;
+   	 left: 0%;
+   	 justify-content: space-between;
 		//transform: translateY(-50%);
+		@media (max-width: em(1220)){
+			width: 80%;
+			left: 50%;
+			transform: translateX(-50%);
+		}
 	}
 
 	// .body-bottom__arrow
@@ -110,3 +165,15 @@
 }
 
 //====================================================================================================
+
+.about {
+	height: 500px;
+	background-color: olivedrab;
+	margin-top: -140px;
+	@media (max-width: em(1220)){
+		margin-top: -103px;
+	}
+	@media (max-width:$mobile){
+		 margin-top: 0; 
+	}
+}
