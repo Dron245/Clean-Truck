@@ -14,6 +14,13 @@
 		z-index: 2;
 		justify-content: space-between;
 		align-items: center;
+		@media (max-width:$mobile){
+			 padding-right: 0;
+			 margin-right: 0;
+			 margin-left: 0;
+			 flex: 0 0 100%;
+   		 padding-left: 0;
+		}
 	}
 
 	// .header__body
@@ -46,8 +53,10 @@
 		flex: 0 0 percent(269.24,1110);
 		padding-bottom: 6.667%;
 		@media (max-width:$mobile){
-			 margin-left: 15px;
-			 
+			//margin-left: 15px;
+			flex: 0 0 percent(176.83,320);
+			padding-bottom: 14.065%;
+			margin-left: 15px;
 		}
 	}
 
@@ -61,13 +70,15 @@
 		@media (max-width:$mobile){
 			 //display: none;
 			 padding-left: 0;
-			 display: flex;
+			 //display: flex;
 			 align-items: center;
-			 margin-top: 20px;
-			 padding: 0px 16px;
+			 //margin-top: 0px;
+			 padding: 0px 0px;
 			 div {
-				font-size: rem(20);
-			 	font-weight: 500;
+				@media (min-width:$mobile){
+					font-size: rem(20);
+					font-weight: 500; 
+				}
 			 }
 		}
 	}
@@ -87,7 +98,8 @@
 			color:$mainblue;
 		}
 		@media (max-width:$mobile){
-			 margin-bottom: initial; 
+			 margin-bottom: initial;
+			 display: none;
 		}
 	}
 
@@ -95,23 +107,34 @@
 
 	&__subtitle {
 		//font-weight: 400;
-		@include adaptiveValue("font-size", 18, 14,1920,320,1);
+		@include adaptiveValue("font-size", 18, 14,1920,768,1);
 		color: #69778A;
 		line-height: 1.3;
 		transition: color 0.3s;
-		
+		@media (max-width:$mobile){
+			 color: #fff;
+			 text-align: center;
+		}
 		// .header__subtitle_city-street
 
 		&_city-street {
 			@media (max-width:$mobile){
-				 padding-left: 20px; 
+				 //padding-left: 20px;
+				 @include adaptiveValue("font-size", 34, 14);
+				 line-height: math.div(21 , 14);
+				 font-weight: 700;
+				 display: block;
 			}
 		}
 
 		// .header__subtitle_phone
 
 		&_phone {
-			
+			@media (max-width:$mobile){
+				
+				@include adaptiveValue("font-size", 44, 18);
+				line-height: math.div(27 , 18); 
+			}
 		}
 	}
 
@@ -119,7 +142,7 @@
 
 	&__phone-link {
 		@media (max-width:$mobile){
-			 display: none; 
+			 
 		}
 	}
 
@@ -137,6 +160,9 @@
 		&:hover{
 			color:$mainblue;
 		}
+		@media (max-width:$mobile){
+			 display: none; 
+		}
 	}
 
 	// .header__menu
@@ -150,10 +176,13 @@
 		display: none;
 		@media (max-width:$mobile){
 			display: block;
+			display: flex;
+			align-items: center;
 			position: relative;
    		 z-index: 2;
 			padding: 21px 19px;
-			background: $mainblue; 
+			background: $mainblue;
+			align-self: stretch;
 		}
 	}
 }
@@ -251,7 +280,7 @@
 		}
 		@media (max-width:$mobile){
 			 font-weight: 500;
-			 font-size: rem(34);
+			 font-size: rem(24);
 			 display: inline-block;
 			 //margin: 0 auto;
 			 padding: 20px 50px;

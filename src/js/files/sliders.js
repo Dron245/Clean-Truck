@@ -151,7 +151,7 @@ function initSliders() {
 			// Пагинация
 			
 			pagination: {
-				el: '.swiper-pagination',
+				el: '.body-top__dotts',
 				clickable: true,
 			},
 			
