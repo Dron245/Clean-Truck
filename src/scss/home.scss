@@ -733,3 +733,124 @@
 		}
 	}
 }
+
+
+/*=========MINABOUT=========*/
+
+.page {
+
+	// .page__minabout
+
+	&__minabout {
+	}
+}
+.minabout {
+
+	// .minabout__container
+
+	&__container {
+	}
+
+	// .minabout__subtitle
+
+	&__subtitle {
+	}
+
+	// .minabout__title
+
+	&__title {
+	}
+
+	// .minabout__info
+
+	&__info {
+	}
+
+	// .minabout__content
+
+	&__content {
+	}
+
+	// .minabout__text
+
+	&__text {
+	}
+}
+.sld {
+
+	// .sld__slider
+
+	&__slider {
+	}
+
+	// .sld__swiper
+
+	&__swiper {
+	}
+
+	// .sld__slide
+
+	&__slide {
+	}
+
+	// .sld__controls
+
+	&__controls {
+	}
+
+	// .sld__arrows
+
+	&__arrows {
+
+		// .sld__arrows_left
+
+		&_left {
+		}
+
+		// .sld__arrows_right
+
+		&_right {
+		}
+	}
+
+	// .sld__fraction
+
+	&__fraction {
+	}
+}
+.-ibg {
+}
+.text-minabout {
+
+	// .text-minabout__title
+
+	&__title {
+	}
+
+	// .text-minabout__info
+
+	&__info {
+	}
+
+	// .text-minabout__list-title
+
+	&__list-title {
+	}
+}
+.detail {
+
+	// .detail__servises
+
+	&__servises {
+	}
+
+	// .detail__servis
+
+	&__servis {
+
+		// .detail__servis_check
+
+		&_check {
+		}
+	}
+}
