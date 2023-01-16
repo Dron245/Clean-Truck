@@ -635,6 +635,8 @@
 	// .detail__item
 
 	&__item {
+		display: flex;
+		flex-direction: column;
 		position: relative;
 		background: #FFFFFF;
 		box-shadow: 0px 0px 30px #EAEAEA;
@@ -674,6 +676,9 @@
 		color: $mainblue;
 		margin-bottom: 10px;
 		text-align: center;
+		flex: 1 0;
+		min-height: 35px;
+		overflow: auto;
 	}
 
 	// .detail__cost
@@ -693,7 +698,10 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		
+		//min-height: 115px;
+		//height: 100%;
+		//overflow: auto;
+		flex: 1 1 auto;
 	}
 
 	// .detail__servis
@@ -742,7 +750,10 @@
 	// .page__minabout
 
 	&__minabout {
+		background: url('@img/main/minabout-bg.png') 0 0 no-repeat;
+		background-size: cover;
 	}
+	
 }
 .minabout {
 
