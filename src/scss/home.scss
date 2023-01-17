@@ -752,6 +752,7 @@
 	&__minabout {
 		background: url('@img/main/minabout-bg.png') 0 0 no-repeat;
 		background-size: cover;
+		//background: darkkhaki;
 	}
 	
 }
@@ -760,31 +761,72 @@
 	// .minabout__container
 
 	&__container {
+		@include adaptiveValue("padding-top", 73, 46, 1920,320,1);
+		@include adaptiveValue("padding-bottom", 84, 50, 1920,320,1);
 	}
 
 	// .minabout__subtitle
 
 	&__subtitle {
+		font-weight: 500;
+		@include adaptiveValue("font-size", 20, 14,1920,320,1);
+		line-height: 1.5;
+		color: white;
+		text-align: center;
+		display: block;
+		margin-bottom: 10px;
+		@media (max-width:$mobile){
+			line-height: 21px;
+		}
 	}
 
 	// .minabout__title
 
 	&__title {
+		margin-bottom: 20px;
+		font-weight: 700;
+		@include adaptiveValue("font-size", 50, 28,1920,320,1);
+		line-height: 1;
+		color: white;
+		text-align: center;
+		display: block;
 	}
 
 	// .minabout__info
 
 	&__info {
+		font-weight: 300;
+		text-align: center;
+		display: block;
+		@include adaptiveValue("font-size", 16, 14,1920,320,1);
+		color: white;
+		line-height: 1.5;
+		margin-bottom: 40px;
+		padding: 0px 150px;
+		@media (max-width:$mobile){
+			 margin-bottom: 30px;
+			 padding: 0;
+		}
 	}
 
 	// .minabout__content
 
 	&__content {
+		// display: grid;
+		// grid-template-columns: percent(665,1110) 1fr;
+		display: flex;
+		@media (max-width:$mobile){
+			 display: block; 
+		}
 	}
 
 	// .minabout__text
 
 	&__text {
+		border-radius: 0 10px 10px 0;
+		@media (max-width:$mobile){
+			 border-radius: 0 0 10px 10px; 
+		}
 	}
 }
 .sld {
@@ -792,6 +834,12 @@
 	// .sld__slider
 
 	&__slider {
+		position: relative;
+		flex: 0 0 percent(665,1110);
+		border-radius:10px 0 0 10px;
+		@media (max-width:$mobile){
+			 border-radius: 10px 10px 0 0; 
+		}
 	}
 
 	// .sld__swiper
@@ -802,20 +850,53 @@
 	// .sld__slide
 
 	&__slide {
+		@media (max-width:$mobile){
+			 padding-bottom: percent(185,290); 
+		}
 	}
 
 	// .sld__controls
 
 	&__controls {
+		position: absolute;
+		display: grid;
+		grid-auto-flow: column;
+		@include adaptiveValue("gap", 40, 30,1920,320,1);
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 50px;
 	}
 
 	// .sld__arrows
 
 	&__arrows {
-
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 50px;
+		height: 50px;
+		border-radius: 100%;
+		border: 2px solid white;
+		transition: background-color 0.3s;
+		background-color: transparent;
+		cursor: pointer;
+		&:hover{
+			background-color: white;
+			& svg path{
+				//fill: #061321;
+				stroke: #061321;
+				//color: black;
+				//width: 500px;
+				//opacity: 0.4;
+  				//filter: grayscale(0%);
+			}
+		}
+		
+		
 		// .sld__arrows_left
 
 		&_left {
+			transform: rotate(180deg);
 		}
 
 		// .sld__arrows_right
@@ -827,25 +908,58 @@
 	// .sld__fraction
 
 	&__fraction {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 10px;
+		color: white;
+		font-weight: 700;
 	}
 }
-.-ibg {
-}
-.text-minabout {
 
+.text-minabout {
+	padding: 75.5px 65px;
+	background-color: white;
+	ul {
+		display: block;
+	}
+	@media (max-width:$mobile){
+		 padding: 20px 0px;
+		 padding-left: 15px;
+		 padding-right: 15px; 
+	}
 	// .text-minabout__title
 
 	&__title {
+		font-weight: 700;
+		font-size: rem(24);
+		line-height: 1;
+		//text-align: center;
+		display: block;
+		@include adaptiveValue("margin-bottom", 16, 10,1920,320,1);
 	}
 
 	// .text-minabout__info
 
 	&__info {
+		display: block;
+		font-weight: 300;
+		//text-align: center;
+		display: block;
+		@include adaptiveValue("font-size", 16, 14,1920,320,1);
+		line-height: 1.5;
+		@include adaptiveValue("margin-bottom", 33, 20,1920,320,1);
 	}
 
 	// .text-minabout__list-title
 
 	&__list-title {
+		@include adaptiveValue("margin-bottom", 25, 14,1920,320,1);
+		display: block;
+		//text-align: center;
+		font-weight: 700;
+		@include adaptiveValue("font-size", 16, 14,1920,320,1);
+		line-height: 1;
 	}
 }
 .detail {
@@ -864,4 +978,48 @@
 		&_check {
 		}
 	}
+}
+
+
+/*========MAPS=========*/
+
+.page {
+
+	// .page__map
+
+	&__map {
+
+	}
+}
+.map {
+
+	// .map__body
+
+	&__body {
+
+	}
+}
+.adresss {
+
+	// .adresss__body
+
+	&__body {
+		height: 700px;
+		@media (max-width:$mobile){
+			 height: 500px; 
+		}
+	}
+}
+.ymaps-2-1-79-map-copyrights-promo {
+	display: none;
+}
+
+.ymaps-2-1-79-balloon__content {
+	padding-bottom: 0;
+	padding-top: 0;
+}
+.ymaps-2-1-79-balloon__tail {
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
 }
