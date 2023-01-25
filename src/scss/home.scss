@@ -140,7 +140,7 @@
 					width: 1px;
 					@include adaptiveValue("height", 183, 97,1920,767.98,1);
 					background: #fff;
-					top: -192px;
+					top: -146px;
 					left: 50%;
 					transform: translateX(-50%);
 					@media (max-width:$mobile){
@@ -178,7 +178,7 @@
 		}
 		& .swiper-pagination-bullet-active {
 			position: relative;
-			&::before, &::after{
+			 &::after{
 				content:'';
 				width: 3px;
 				height: 3px;
@@ -187,7 +187,10 @@
 				left: 50%;
 				border-radius: 100%;
 				background: white;
-				transform: translate(-50%, -50%);
+				transform: translateX(-37%) translateY(-63%);
+				@media (max-width:$mobile){
+					 transform: translate(-68%, -63%);
+				}
 			}
 			
 		}

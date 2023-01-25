@@ -1,8 +1,8 @@
 //====================================================================================================
 .footer {
-	//background: url('@img/footer/Rectangle 725.jpg') 0 0 no-repeat;
+	background: url('@img/footer/Rectangle 725.jpg') 0 0 no-repeat;
 	background-size: cover;
-	background-color: rosybrown;
+	//background-color: rosybrown;
 	// .footer__top
 
 	&__top {
@@ -10,7 +10,8 @@
 		align-items: center;
 		justify-content: space-between;
 		border-bottom: 1px solid white;
-		padding: 10px 0px;
+		padding-top: 10px;
+		padding-bottom: 10px;
 	}
 
 	// .footer__midle
@@ -18,13 +19,14 @@
 	&__midle {
 		@include adaptiveValue("margin-top", 71, 27,1920,320,1);
 		@include adaptiveValue("margin-bottom", 51, 30,1920,320,1);
+		position: relative;
 	}
 
 	// .footer__bottom
 
 	&__bottom {
-		//background: #000000;
-		background-color: salmon;
+		background: #000000;
+		//background-color: salmon;
 		opacity: 0.8;
 	}
 }
@@ -35,6 +37,10 @@
 	&__logo {
 		flex: 0 0 percent(269,1110);
 		padding-bottom: percent(74,1110);
+		@media (max-width:$mobile){
+			flex: 0 0 percent(500,1110);
+			padding-bottom: 11.667%
+		}
 	}
 
 	// .top-footer__fb
@@ -52,15 +58,39 @@
 				 display: none; 
 			}
 		}
+		a {
+			//transition: all 0.3s;
+			& svg rect, & svg path {
+				transition: all 0.3s;
+			}
+			& svg path {
+				//transition: all 0.3s;
+			}
+			&:hover svg rect{
+				fill: #000000;
+			}
+			&:hover svg path{
+				fill: #fff;
+			}
+		}
 	}
 
 	&__img {
-		transition: all 0.3;
+		//transition: all 0.3s;
+		border: 1px solid transparent;
+		rect {
+			
+		}
+		&:hover{
+			border: 1px solid rgba(255, 255, 255, 0.795);
+			
+		}
 		&:hover rect{
-			fill: black;
+			//fill: black;
+			
 		}
 		&:hover path{
-			fill: white;
+			//fill: white;
 		}
 	}
 }
@@ -85,10 +115,13 @@
 		}
 		&:nth-child(2) {
 			flex: 0 0 percent(362,1110);
+			@media (max-width:$mobile){
+				 margin: 42px 0px 20px 0px; 
+			}
 		}
 		@media (max-width:$mobile){
 			 :nth-child(2) {
-				margin: 40px 0px 20px 0px;
+				margin: 10px 0px 10px 0px;
 				
 			 } 
 		}
@@ -110,22 +143,31 @@
 		font-weight: 300;
 		font-size: 13px;
 		line-height: 185%;
-
+		color: white;
 		&_gp {
 			padding-right: 10px;
+		}
+		&_link {
+			transition: color 0.3s;
+			&:hover{
+				color:$mainblue;
+			}
 		}
 	}
 
 	// .midle-footer__link
 
 	&__link {
-		@include adaptiveValue("margin-top", 24, 10,1920,320,1);
+		@include adaptiveValue("margin-top", 24, 10,1920,768,1);
 		display: inline-block;
 		font-weight: 300;
 		font-size: 14px;
 		line-height: 100%;
 		transition: color 0.3s;
 		text-decoration-line: underline !important;
+		@media (max-width:$mobile){
+			 margin-top: 0; 
+		}
 		&:hover{
 			color: $mainblue;
 		}
@@ -141,6 +183,22 @@
 	// .midle-footer__clock
 
 	&__clock {
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 1.85;
+		color: white;
+		span {
+			color: $mainblue;
+		}
+	}
+
+	&__wave {
+		position: absolute;
+		@include adaptiveValue("right", -70, 50,1920,768,1);
+		bottom: -35px;
+		@media (max-width:$mobile){
+			 display: none; 
+		}
 	}
 }
 .bottom-footer {
@@ -148,21 +206,62 @@
 	// .bottom-footer__container
 
 	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-top: 29px;
+		padding-bottom: 29px;
+		@media (max-width:$mobile){
+			 flex-wrap: wrap;
+			 padding-top: 20px;
+			 padding-bottom: 20px;
+			 row-gap: 10px;
+		}
 	}
 
 	// .bottom-footer__link
 
 	&__link {
+		font-weight: 300;
+		@include adaptiveValue("font-size", 14, 10);
+		line-height: math.div(21 , 14);
+		color: white;
+		text-decoration: underline !important;
+		transition: color 0.3s;
+		&:hover{
+			color: $mainblue;
+		}
+		@media (max-width:$mobile){
+			flex: 1 1 100%;
+			font-weight: 400;
+			line-height: math.div(15 , 10);
+		}
 	}
 
 	// .bottom-footer__copright
 
 	&__copright {
+		font-weight: 300;
+		@include adaptiveValue("font-size", 14, 12);
+		line-height: math.div(21 , 14);
+		color: white;
+		@media (max-width:$mobile){
+			 font-weight: 400;
+			 line-height: math.div(18 , 12); 
+		}
 	}
 
 	// .bottom-footer__ontop
 
 	&__ontop {
+		color: $mainblue;
+		font-weight: 300;
+		@include adaptiveValue("font-size", 16, 14);
+		line-height: math.div(21 , 16);
+		@media (max-width:$mobile){
+			 font-weight: 400;
+			 line-height: math.div(21 , 14); 
+		}
 	}
 }
 
