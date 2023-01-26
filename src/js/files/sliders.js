@@ -133,7 +133,7 @@ function initSliders() {
 			spaceBetween: 0,
 			//autoHeight: true,
 			speed: 1000,
-			//autoplay:true,
+			autoplay:true,
 			//effect:'fade',
 			//touchRatio: 0,
 			//simulateTouch: false,
@@ -144,10 +144,10 @@ function initSliders() {
 			
 			// Эффекты
 			effect: 'fade',
-			// autoplay: {
-			// 	delay: 3000,
-			// 	disableOnInteraction: false,
-			// },
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
 			
 
 			// Пагинация
