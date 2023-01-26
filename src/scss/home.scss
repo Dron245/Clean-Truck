@@ -102,22 +102,48 @@
 	}
 
 	&__dotts {
-		position: absolute;
-		@include adaptiveValue("top", 450, 180,1920,767.98,1);
-		//transform: translateY(-50%);
-		@include adaptiveValue("right", 146, 20,1920,767.98,1);
-		display: flex;
-		flex-direction: column;
-		@media (max-width:$mobile){
+		 display: flex;
+		 flex-direction: column;
+		 &::before{
+			content:'';
+				position: absolute;
+					width: 1px;
+					@include adaptiveValue("height", 183, 97,1920,767.98,1);
+					background: #fff;
+					bottom: 112px;
+					left: 50%;
+					transform: translateX(-50%);
+					@media (max-width:$mobile){
+						 top: 50%;
+						 width: 97px;
+						 height: 1px;
+						 left: -105px;
+						 right: initial;
+						 transform: translate(0, -50%);
+					}
+		 }
+		 &::after{
+			content:'';
+			position: absolute;
+					width: 1px;
+					@include adaptiveValue("height", 183, 97,1920,767.98,1);
+					background: #fff;
+					top: 110%;
+					left: 50%;
+					transform: translateX(-50%);
+					@media (max-width:$mobile){
+						 top: 50%;
+						 width: 97px;
+						 height: 1px;
+						 left: initial;
+						 right: -104px;
+						 transform: translate(0, -50%);
+					}
+		 }
+		 @media (max-width:$mobile){
 			 flex-direction: row;
-			
-			 right: initial;
-			 left: 50%;
-			 transform: translateX(-50%);
-			 bottom: 5%;
-			 align-items: flex-end;
-			 
-		}
+			 align-items: flex-end; 
+		 }
 		//transform: translateY(-50%);
 		& .swiper-pagination-bullet {
 			position: relative;
@@ -133,48 +159,7 @@
 					 margin-right: 10px; 
 				}
 			}
-			&:first-child{
-				&::before{
-					content:'';
-					position: absolute;
-					width: 1px;
-					@include adaptiveValue("height", 183, 97,1920,767.98,1);
-					background: #fff;
-					top: -146px;
-					left: 50%;
-					transform: translateX(-50%);
-					@media (max-width:$mobile){
-						 top: 50%;
-						 width: 97px;
-						 height: 1px;
-						 left: initial;
-						 right: -33px;
-					}
-				}
-				&::after{
-					content:'';
-					
-				}
-			}
-			&:last-child{
-				&::after{
-					content:'';
-					position: absolute;
-					width: 1px;
-					@include adaptiveValue("height", 183, 97,1920,767.98,1);
-					background: #fff;
-					top: 16px;
-					left: 50%;
-					transform: translateX(-50%);
-					@media (max-width:$mobile){
-						 top: 50%;
-						 width: 97px;
-						 height: 1px;
-						 left: initial;
-						right: -155px;
-					}
-				}
-			}
+			
 		}
 		& .swiper-pagination-bullet-active {
 			position: relative;
@@ -196,6 +181,46 @@
 		}
 	}
 
+	&__dotts-line {
+		position: absolute;
+		@include adaptiveValue("top", 450, 180,1920,767.98,1);
+		//transform: translateY(-50%);
+		@include adaptiveValue("right", 146, 20,1920,767.98,1);
+		// display: flex;
+		// flex-direction: column;
+		
+		@media (max-width:$mobile){
+			//  flex-direction: row;
+			top: initial;
+			 right: initial;
+			 left: 50%;
+			 transform: translateX(-50%);
+			 bottom: 5%;
+			//  align-items: flex-end;
+			 
+		}
+		// &::before{
+		// 	content:'';
+		// 	position: absolute;
+		// 			width: 2px;
+		// 			@include adaptiveValue("height", 183, 97,1920,767.98,1);
+		// 			background: rgb(238, 15, 15);
+		// 			top: -146px;
+		// 			left: 50%;
+		// 			transform: translateX(-50%);
+		// 			@media (max-width:$mobile){
+		// 				 top: 50%;
+		// 				 width: 97px;
+		// 				 height: 2px;
+		// 				 left: initial;
+		// 				 right: -33px;
+		// 			}
+		// }
+		&::after{
+			content:'';
+			
+		}
+	}
 	
 	// .body-top__slide
 

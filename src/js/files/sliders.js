@@ -133,21 +133,21 @@ function initSliders() {
 			spaceBetween: 0,
 			//autoHeight: true,
 			speed: 1000,
-			autoplay:true,
+			//autoplay:true,
 			//effect:'fade',
 			//touchRatio: 0,
 			//simulateTouch: false,
-			//loop: true,
+			loop: true,
 			//preloadImages: false,
 			//lazy: true,
 
 			
 			// Эффекты
 			effect: 'fade',
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
+			// autoplay: {
+			// 	delay: 3000,
+			// 	disableOnInteraction: false,
+			// },
 			
 
 			// Пагинация
